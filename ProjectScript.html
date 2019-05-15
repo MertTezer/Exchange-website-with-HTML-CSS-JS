@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+		<style >
+
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333
+		}
+		li{
+			float: left;
+		}
+
+		li a{
+			display: black;
+			color: white;
+			text-align: center;
+			padding: 25px;
+			text-decoration: none;
+		}
+
+		li a:hover{
+			background-color: #111111
+
+		}
+
+		.panel{
+width: 200px;
+margin: auto;
+}
+ 
+.panel input{
+width: 100%;
+height: 30px;
+margin:3px 0;
+background: #ededed;
+border:solid 1px #ccc;
+}
+ 
+#sonuc-yaz{
+margin-top:10px;
+height: 50px;
+line-height: 50px;
+font-size:1em;
+font-weight: bold;
+}
+	
+
+	</style>
+
+	<script>
+
+		
+		function hesapla(){
+			var sterlin = parseFloat(document.getElementById("sterlin").value,10);
+			console.log(sterlin);
+
+			var dollar = sterlin*1.30;
+			console.log(dollar);
+			dollar=dollar.toFixed(2);
+			document.getElementById("sonuc").value = dollar;
+
+			var euro=sterlin*1.16;
+			console.log(euro);
+			euro=euro.toFixed(2);
+			document.getElementById("sonuc1").value = euro;
+
+			var tl=sterlin*7.8;
+			console.log(tl);
+			tl=tl.toFixed(2);
+			document.getElementById("sonuc2").value = tl;
+
+			var yen=sterlin*142.88;
+			console.log(yen);
+			yen=yen.toFixed(2);
+			document.getElementById("sonuc3").value=yen;
+
+			var riyal=sterlin*4.87;
+			console.log(riyal);
+			riyal=riyal.toFixed(2);
+			document.getElementById("sonuc4").value=riyal;
+
+			var frang=sterlin*1.31;
+			console.log(frang);
+			frang=frang.toFixed(2);
+			document.getElementById("sonuc5").value=frang;
+
+
+			
+ 		}
+ 	</script>
+	
+</head>
+<body>
+	
+	<ul>
+		
+		<li><a href="PS.Turkish.html">TL</a></li>
+		<li><a href="PS.Dollar.html">USD</a></li>
+		<li><a href="PS.Contact.html">EU</a></li>
+		<li><a href="ProjectScript.html">GBP</a></li>
+		<li><a href="PS.Feedback.html">Feedback</a></li>
+
+
+	</ul>
+
+	<br>
+	<br>
+
+	<marquee>
+		<img src="gbp.jpg" width="80" height="80">
+		&emsp;
+		&emsp;
+		&emsp;
+		<img src="gbp.jpg" width="80" height="80">
+		&emsp;
+		&emsp;
+		&emsp;
+		<img src="gbp.jpg" width="80" height="80">
+	</marquee>
+	
+
+	<div class="panel">
+
+
+
+		<br>
+		GBP:
+		<input type="text" id="sterlin" placeholder="Sterlin">
+		
+		<button onclick="hesapla()">HESAPLA</button>
+		<br>
+		<br>
+		<br>
+		USD:
+		<input type="text" id="sonuc">
+		<br>
+		Euro:
+		<input type="text" id="sonuc1">
+		<br>
+		Turkish Liras:
+		<input type="text" id="sonuc2">
+		<br>
+		Yen:
+		<input type="text" id="sonuc3">
+		<br>
+		Riyal:
+		<input type="text" id="sonuc4">
+		<br>
+		Frang:
+		<input type="text" id="sonuc5">
+
+
+		
+
+
+		
+	</div>
+
+</body>
+</html>
